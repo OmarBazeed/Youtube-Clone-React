@@ -20,7 +20,7 @@ return (
                     )
                 })
             }
-            <p className='text-light mt-lg-3 sidebarPara'>copyRight 2022 &copy;  Omar Bazeed</p>
+            <p className='text-light mt-lg-3 sidebarPara'>copyRight 2022 &copy;  Omar BazeeD </p>
         </div>
 )
 }
