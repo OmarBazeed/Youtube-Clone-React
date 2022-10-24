@@ -5,11 +5,12 @@ import { Link, NavLink } from 'react-router-dom';
 import { demoProfilePicture ,demoChannelTitle } from '../utils/constants';
 
 
-const ChannelCard = ({channelDetails,marginTop}) => {
+const ChannelCard = ({channelDetails}) => {
 
   return (
     <NavLink to={`/channel/${channelDetails?.id?.channelId}`} >
-        <div className="card mb-xs-5 mb-md-2 mt-5 m-auto rounded-top" style={{width:"18rem",borderWidth:'0',marginTop}}>
+
+        <div className="card  mb-xs-5 mb-md-2 mt-5 m-auto rounded-top" style={{ width:"18rem",borderWidth:'0' }} >
             <div className='channelPic bg-dark p-2'>
               <img  className="card-img-top rounded-circle"  src={channelDetails?.snippet?.thumbnails?.high?.url || demoProfilePicture} alt={channelDetails?.snippet?.title} /> 
             </div>
@@ -22,6 +23,7 @@ const ChannelCard = ({channelDetails,marginTop}) => {
                 )}
             </div>
         </div>
+
     </NavLink>
   )
 }

@@ -22,12 +22,12 @@ useEffect(()=>{
       <div style={{height:'300px',background:'radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)'}}></div>
 
       <div className='d-flex flex-column justify-content-center align-items-center '>
-          <div className='text-start rounded-circle'>
-          <ChannelCard channelDetails={channelDetails}  marginTop='-100px' /> 
+          <div className='text-start rounded-circle' style={{marginTop:'-100px'}}>
+            <ChannelCard channelDetails={channelDetails}  /> 
           </div>
 
           <div className='text-center'> 
-          <Videos videos={videos} width='90%' margin='auto' height=''   /> 
+            <Videos videos={videos} width='90%' margin='auto' height=''   /> 
           </div>
       </div>
     </>
