@@ -21,6 +21,7 @@ return (
         <Sidebar
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
+        overflowY='scroll'
         />
 
         <div className='col-md-10'>

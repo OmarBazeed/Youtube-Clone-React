@@ -83,3 +83,32 @@ a {
         margin-top: 150px !important;
     }
 }
+
+
+/*broken Videos */
+
+.hideDiv {
+    display: none;
+}
+
+
+/* Search Bar*/
+
+.searchForm {
+    transform-style: preserve-3d;
+    perspective: 600px;
+}
+
+.searchBtn {
+    transform: translateX(-42px);
+    transition: .7s !important;
+}
+
+.searchForm:hover .searchBtn {
+    transform: translateX(7px) rotateX(1turn);
+    filter: drop-shadow(1px 1px 15px rgb(93, 177, 245));
+}
+
+.searchInput:focus {
+    --bs-btn-focus-shadow-rgb: none !important;
+}

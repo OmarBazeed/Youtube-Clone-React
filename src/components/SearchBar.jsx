@@ -10,20 +10,20 @@ export default function SearchBar() {
     const navigate = useNavigate();
     const[serachTerm,setserachTerm] = useState('');
 
-const handleSubmit = ()=>{
-    navigate(`/search/${serachTerm}`);
-    setserachTerm('');
-}
+    const handleSubmit = ()=>{
+        navigate(`/search/${serachTerm}`);
+        setserachTerm('');
+    }
 
 return (
-    <div className='text-danger lead'>
+    <React.Fragment>
+        <form onSubmit={handleSubmit} className='searchForm'>
+            <input type='text' onChange={(e)=>setserachTerm(e.target.value)} className='btn btn-light searchInput' value={serachTerm}  />
 
-        <input type='text' onChange={(e)=>setserachTerm(e.target.value)} className='btn btn-outline-light' value={serachTerm} />
-
-        <button className='btn btn-danger' onClick={handleSubmit}>
-            <FontAwesomeIcon icon={faSearch} />
-        </button> 
-
-    </div>
+            <button className='btn btn-danger searchBtn' >
+                <FontAwesomeIcon icon={faSearch} />
+            </button> 
+        </form>
+    </React.Fragment>
 )
 }
