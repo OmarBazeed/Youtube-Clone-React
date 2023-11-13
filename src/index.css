@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+@media (max-width: 991px) {
+  .mySidebar {
+    height: 90px !important;
+    overflow-x: scroll;
+  }
+}
+
+.mySidebar::-webkit-scrollbar,
+.myVideosCom::-webkit-scrollbar {
+  width: 4px;
+  height: 5px;
+}
+
+.mySidebar::-webkit-scrollbar-thumb,
+.myVideosCom::-webkit-scrollbar-thumb {
+  background-color: #f44336;
+  border-radius: 10px;
+}
+
+@media (max-width: 574px) {
+  .navbarRow {
+    justify-content: space-between;
+  }
+  .navbarRow div {
+    width: auto !important;
+  }
+  .sidebarPara {
+    font-size: 12px;
+    margin-top: 2px !important;
+    font-weight: bold;
+  }
+}
+
+.videoTitle {
+  font-size: 15px;
+}
+
+.channelTitle {
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .myVideosCom {
+    height: 85vh !important;
+  }
+}
+
+.react-player {
+  width: 100% !important;
+  height: 83vh !important;
+}
+
+@media (max-width: 576px) {
+  .react-player {
+    height: 100% !important;
+  }
+  .videosList {
+    margin-top: 150px !important;
+  }
+}
+
+/*broken Videos */
+
+.hideDiv {
+  display: none;
+}
+
+/* Search Bar*/
+
+.searchForm {
+  transform-style: preserve-3d;
+  perspective: 600px;
+}
+
+.searchBtn {
+  transform: translateX(-42px);
+  transition: 0.7s !important;
+}
+
+.searchForm:hover .searchBtn {
+  transform: translateX(5px) scale(1.05);
+}
+
+.searchInput:focus {
+  --bs-btn-focus-shadow-rgb: none !important;
+}
