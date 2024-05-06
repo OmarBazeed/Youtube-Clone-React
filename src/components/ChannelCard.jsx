@@ -26,9 +26,9 @@ const ChannelCard = ({ channelDetails }) => {
         <div className="card-body bg-dark text-center">
           <NavLink
             className="card-title text-light d-block  channelTitle fs-5 fw-bold"
-            to={`/channel/${channelDetails?.snippet?.channelId}`}
+            to={`/channel/${channelDetails?.id}`}
           >
-            {channelDetails?.snippet?.channelTitle || demoChannelTitle}{" "}
+            {channelDetails?.snippet?.channelTitle || demoChannelTitle}
             <FontAwesomeIcon icon={faCheckCircle} className="text-primary" />
           </NavLink>
 
