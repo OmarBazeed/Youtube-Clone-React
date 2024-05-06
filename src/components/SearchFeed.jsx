@@ -5,12 +5,13 @@ import { Videos } from "./";
 
 export default function SearchFeed() {
   const [videos, setVideos] = useState([]);
-  const {  searchTerm } = useParams();
+  const { searchTerm } = useParams();
 
   useEffect(() => {
-    fetchFromAPI(`search?part=snippet&q=${searchTerm}`).then((data) =>
-      setVideos(data.items)
-    );
+    fetchFromAPI(`search?part=snippet&q=${searchTerm}`).then((data) => {
+      setVideos(data.items);
+      console.log(data);
+    });
   }, [searchTerm]);
 
   return (
@@ -18,7 +19,7 @@ export default function SearchFeed() {
       className="container-fluid mt-0 text-center"
       style={{ background: "black" }}
     >
-      <p className="text-light fs-4 fw-bold mb-4">
+      <p className="text-light fs-4 fw-bold mb-4 serchTitle">
         You Are Searching For :
         <span className="text-danger"> {searchTerm}</span>
       </p>

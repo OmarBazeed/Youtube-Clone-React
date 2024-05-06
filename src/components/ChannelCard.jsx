@@ -5,8 +5,9 @@ import { NavLink } from "react-router-dom";
 import { demoChannelTitle, demoProfilePicture } from "../utils/constants";
 
 const ChannelCard = ({ channelDetails }) => {
+  console.log(channelDetails);
   return (
-    <NavLink to={`/channel/${channelDetails?.id?.channelId}`}>
+    <NavLink to={`/channel/${channelDetails?.id}`}>
       <div
         className="card  mb-xs-5 mb-md-2 mt-5 m-auto rounded-top"
         style={{ width: "18rem", borderWidth: "0" }}
@@ -33,11 +34,10 @@ const ChannelCard = ({ channelDetails }) => {
 
           {channelDetails?.statistics?.subscriberCount && (
             <span className="text-light">
-              {" "}
               {parseInt(
                 channelDetails?.statistics?.subscriberCount
-              ).toLocaleString()}{" "}
-              Subsribers{" "}
+              ).toLocaleString()}
+              Subsribers
             </span>
           )}
         </div>

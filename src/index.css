@@ -112,3 +112,9 @@ a {
 .searchInput:focus {
   --bs-btn-focus-shadow-rgb: none !important;
 }
+.serchTitle {
+  margin-top: 3.5rem !important;
+}
+.videoShow {
+  margin-top: 70px !important;
+}
